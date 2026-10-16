@@ -1,0 +1,11 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.env
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
+.netlify/
