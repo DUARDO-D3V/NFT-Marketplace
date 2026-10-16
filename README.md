@@ -2,7 +2,7 @@
 
 Esta é a minha solução do desafio: um marketplace de NFTs (Kurio) com catálogo, detalhe, carrinho, checkout simulado, recibo, conta, perfil e carteiras, tudo responsivo. Os dados vêm de mocks MSW na camada de rede (REST e Socket.IO), sem backend. A Roboto Mono é servida localmente em `public/fonts/` (licença OFL). Como o arquivo de design não trouxe as artes isoladas, recortei os retratos de `public/art/` dos previews (`preview*.webp`) para uso local; essa é a única substituição de asset.
 
-**URL pública:** https://kuriomarketplace.netlify.app/ · **Repositório:** https://github.com/DUARDO-D3V/NFT-Marketplace.git
+**URL pública:** https://kuriomarketplace.netlify.app/ · **Repositório:** https://github.com/DUARDO-D3V/NFT-Marketplace
 
 ### Requisitos
 
