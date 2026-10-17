@@ -269,6 +269,9 @@ test("login móvel usa tela completa e permite alternar para cadastro", async ({
   await expect(dialog.getByRole("heading", { name: "Criar perfil de colecionador" })).toBeVisible();
   await expect(dialog.getByLabel("Confirmar senha")).toBeVisible();
   await expect(dialog.locator('[data-slot="input"]')).toHaveCount(4);
+  const brand = await dialog.locator(".auth-mobile-brand").boundingBox();
+  const heading = await dialog.getByRole("heading", { name: "Criar perfil de colecionador" }).boundingBox();
+  expect(brand!.y + brand!.height).toBeLessThanOrEqual(heading!.y);
 });
 
 test("pagamento móvel prioriza a escolha de carteira e fixa a confirmação", async ({ page }) => {

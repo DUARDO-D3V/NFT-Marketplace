@@ -1195,9 +1195,9 @@ main { animation: page-fade .18s ease-out; }
   .checkout-layout { padding-bottom: 80px; }
 
   .auth-modal-backdrop { z-index: 1000; display: block; overflow-y: auto; padding: 0; background: #130d0a; }
-  .auth-modal-card { width: 100%; min-height: 100dvh; max-height: none; display: flex; flex-direction: column; justify-content: center; overflow: visible; padding: 100px 28px 25px; border: 0; border-radius: 32px; background: #130d0a; box-shadow: none; animation: none; }
+  .auth-modal-card { width: 100%; min-height: 100dvh; max-height: none; display: flex; flex-direction: column; justify-content: center; overflow: visible; padding: 40px 28px 25px; border: 0; border-radius: 32px; background: #130d0a; box-shadow: none; animation: none; }
   .auth-modal-close, .auth-modal-tabs, .auth-modal-description { display: none; }
-  .auth-mobile-brand { position: absolute; top: 15%; left: 0; width: 100%; display: block; color: #f1e9de; font-size: 30px; font-weight: 700; letter-spacing: .08em; text-align: center; }
+  .auth-mobile-brand { position: static; width: 100%; display: block; margin: 0 0 30px; color: #f1e9de; font-size: 30px; font-weight: 700; letter-spacing: .08em; text-align: center; }
   .auth-mobile-heading { display: block; margin: 0 0 34px; color: #f2e9df; font-size: 18px; font-weight: 600; text-align: center; }
   .auth-modal-form { gap: 12px; }
   .auth-modal-field input { height: 50px; padding: 0 15px; border: 1px solid #4a2f20; border-radius: 11px; background: transparent; font-size: 14px; }
