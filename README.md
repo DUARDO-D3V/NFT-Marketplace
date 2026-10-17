@@ -57,15 +57,6 @@ npm run audit:lighthouse
 
 O repositório inclui `netlify.toml` (build `npm run build`, publicação em `dist`, Node 20, `VITE_MOCK_API=true`) e o fallback `/* → /index.html` (status 200), que permite acesso direto e refresh de qualquer rota. Como os mocks (REST e Socket.IO) rodam no navegador via MSW, **nenhum backend ou servidor Socket.IO é necessário** na publicação.
 
-Como publiquei (ou como publicar):
-
-1. `npm ci && npm run build`, e conferir com `npm run preview`.
-2. Arrastar a pasta `dist/` em *Netlify → Add new site → Deploy manually* (ou `npx netlify deploy --prod --dir=dist` após `npx netlify login`).
-3. Alternativamente, conectar o repositório; as configurações vêm do `netlify.toml`.
-4. Validar no site publicado: abrir uma rota direta (por exemplo `/nft/emerald-ape-042`), atualizar a página e usar o seletor DEMO em “Alterar preço via Socket.IO”.
-
-O service worker do MSW (`public/mockServiceWorker.js`) é servido na raiz do site; o HTTPS do Netlify satisfaz o requisito do navegador.
-
 
 Meus testes Playwright verificam pesquisa/filtros, eventos de preço pelo cliente Socket.IO, edição e quantidade no carrinho, login inválido, compra simulada com recibo, retomada após expiração de sessão e timeout, layout móvel, cadastro/perfil/carteiras, favoritos, recusa de pagamento, preservação do carrinho e snapshots visuais das telas principais em 390 px e 1440 px. Há também `flows`, `realtime` (eventos duplicados/antigos, reconexão, pedido pendente, clique repetido) e `journeys` (paginação com histórico, logout, rollback de favoritos, senha/avatar, 403, skeleton, reduced-motion, foco e overflow em 390/768/1440 px). Também há `commerce` (cupom, carrinho, isolamento entre usuários, idempotência, filtros combinados) e `a11y` (axe-core). Todas as specs rodam também no projeto `mobile`. A execução gera o relatório HTML em `playwright-report/`, snapshots em `tests/e2e/marketplace.spec.ts-snapshots/` e traces para falhas em `test-results/`.
 
